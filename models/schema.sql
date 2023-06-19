@@ -1,0 +1,29 @@
+DROP TABLE verifications;
+DROP TABLE users;
+
+
+
+CREATE TABLE users(
+	id SERIAL,
+	user_id VARCHAR(74) PRIMARY KEY,	
+	email VARCHAR(512)  NOT NULL UNIQUE,
+	username VARCHAR(64) NOT NULL UNIQUE,
+	biography VARCHAR(1024),
+	avatar_url VARCHAR(512),
+	password VARCHAR(512) NOT NULL,
+	salt VARCHAR(512) NOT NULL,
+	github_id VARCHAR(512) UNIQUE,
+	role VARCHAR(100) NOT NULL DEFAULT '',
+	verified BOOL DEFAULT false,
+	created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+	updated_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE verifications(
+	id SERIAL,
+	verification_id VARCHAR(74) PRIMARY KEY,
+	email VARCHAR(512),
+	code VARCHAR(512),
+	expired BOOL NOT NULL DEFAULT false,
+	created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
