@@ -3,9 +3,9 @@ An Account Creation, Account Deletion, User Authentication, Authorizatin And Ses
 
 ## How TO Run
 
-### Required Environment
-Postgre
-Redis
+### Required
+- Postgre
+- Redis
 
 ### Env configuration
 you should open the .env file and modify it
@@ -32,18 +32,18 @@ $ go run .
 NOTE: make sure you have the postgres server, redis server and the .env all setup before running the program
 
 ## API Techstack
-Go
-Postgres
-Redis
+- Go
+- Postgres
+- Redis
 
-### API Endpoints
+## API Endpoints
 
-/api/auth/register
-/api/auth/verify/{username}/{token}
-/api/auth/login
-/api/auth/logout
-/api/auth/delete
-/api/home
+- /api/auth/register
+- /api/auth/verify/{username}/{token}
+- /api/auth/login
+- /api/auth/logout
+- /api/auth/delete
+- /api/home
 
 ## Usage
 * Register Functon API Callback(POST REQUEST)
