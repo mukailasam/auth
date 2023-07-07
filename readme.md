@@ -14,13 +14,13 @@ you should open the .env file and modify it
 clone the repo
 
 ```
-git clone https://github.com/ftsog/ecom
+git clone https://github.com/ftsog/auth
 ```
 
 move into the program directory
 
 ```
-cd ecom 
+cd auth
 ```
 
 run the program
